@@ -3,7 +3,7 @@
 # highlight decrementing function
 x = int(input('Enter an integer: ')) 
 for ans in range(0, abs(x)+1):
-    print('Value of the decrementing function abs(x) - ans**3 is', abs(x) - ans**3)
+    print(f'Value of the decrementing function abs({x}) - {ans}**3 is {abs(x) - ans**3}')
     if ans**3 >= abs(x): 
         break
 if ans**3 != abs(x):
