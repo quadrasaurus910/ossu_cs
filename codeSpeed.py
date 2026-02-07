@@ -6,5 +6,5 @@ startTime = datetime.datetime.now()
 while i < maxVal:
     i=i+1 
 endTime = datetime.datetime.now()
-delta = startTime - endTime
-print(delta) #startTime.strftime('%S %f'))
+delta = endTime - startTime
+print(f"It took {delta} to count to {maxVal}") #startTime.strftime('%S %f'))
