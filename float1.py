@@ -11,3 +11,4 @@ for i in range(10):
         print(x, '= 1.0') 
     else:
         print(x, 'is not 1.0')
+    # print(x == 10.0*0.1)
