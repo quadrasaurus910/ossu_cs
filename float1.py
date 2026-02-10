@@ -12,3 +12,4 @@ for i in range(10):
     else:
         print(x, 'is not 1.0')
     # print(x == 10.0*0.1)
+    print(f"2**0.5 = {round(2**0.5, i)} rounded to the {i} place")
