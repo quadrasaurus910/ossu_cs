@@ -1,12 +1,12 @@
 
 N = int(input('Enter a positive integer: '))
 
-decrementor = N
+incrementor = 0
 
-while decrementor > 0:
-    if decrementor ** 3 == N:
-        print(f'{decrementor} is the cube root of {N}')
+while incrementor <= N:
+    if incrementor ** 3 == N:
+        print(f'{incrementor} is the cube root of {N}')
         break
-    decrementor -= 1
-if decrementor == 0:
+    incrementor += 1
+if incrementor == N + 1:
     print('error')
