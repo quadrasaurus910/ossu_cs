@@ -9,7 +9,7 @@ def isPalindrome(s):
         for c in s:
             if c in 'abcdefghijklmnopqrstuvwxyz': 
                 letters = letters + c
-            return letters
+        return letters
     
     def isPal(s):
         print(' isPal called with', s) 
