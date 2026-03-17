@@ -5,6 +5,7 @@ def eval_quadratic(a, b, c, x):
     Returns the value of the quadratic a×x² + b×x + c.
     """
     # Your code here
+    return (a * x * (x**2)) + (b * x * x) + c
 
 # Examples:    
 print(eval_quadratic(1, 1, 1, 1)) # prints 3
