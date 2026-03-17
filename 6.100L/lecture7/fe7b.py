@@ -8,8 +8,8 @@ def two_quadratics(a1, b1, c1, x1, a2, b2, c2, x2):
     Prints the sum of the two evaluations. Does not return anything.
     """
     # Your code here
-    q1 = (a1 * x1 * (x1 ** 2)) + (b1 * x1 * x1) + c1
-    q2 = (a2 * x2 * (x2 ** 2)) + (b2 * x2 * x2) + c2
+    q1 = (a1 * (x1 ** 2)) + (b1 * x1) + c1
+    q2 = (a2 * (x2 ** 2)) + (b2 * x2) + c2
 
     print(q1 + q2)
 
