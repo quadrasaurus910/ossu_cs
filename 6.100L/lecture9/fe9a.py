@@ -8,6 +8,11 @@ def dot_product(tA, tB):
     * second element is the sum of the pairwise products of tA and tB
     """
     # Your code here
+    total = 0
+    for i in range(len(tA)):
+        total += tA[i] * tB[i]
+    return (len(tA), total)
+
 
 # Examples:
 tA = (1, 2, 3)
