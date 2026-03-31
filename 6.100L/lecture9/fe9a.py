@@ -9,6 +9,8 @@ def dot_product(tA, tB):
     """
     # Your code here
     total = 0
+    l = lambda x,y : x*y
+    print(map(l, tA, tB))
     for i in range(len(tA)):
         total += tA[i] * tB[i]
     return (len(tA), total)
