@@ -7,12 +7,11 @@ def remove_and_sort(Lin, k):
     Does not return anything.
     """
     # Your code here  
-    Lcopy = L[:]
-    if len(Lin) < k:
-        Lin.clear()
-    else:
-        for i in range(k):
-            ...
+    Lcopy = Lin[:]
+    Lin.clear()
+    if k < len(Lcopy):
+        Lin.extend(Lcopy[k:])
+        Lin.sort()
 
 # Examples:
 L = [1,6,3]
