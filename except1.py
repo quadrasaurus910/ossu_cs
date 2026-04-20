@@ -10,4 +10,5 @@ def findAnEven(L):
             continue
     raise ValueError("List contains no even number")
 
-print(findAnEven([1, "a","b"]))
+print(findAnEven([1, "a", 2, "b"]))
+# print(float("nan")) not a number, special float
