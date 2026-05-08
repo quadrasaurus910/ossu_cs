@@ -1,3 +1,6 @@
+# Showcases various class implimentation including initialization, inheritance, 
+# overriding superclass initialization, and instance methods and variables.
+
 def findPayment(loan, r, m):
     """Assumes: loan and r are floats, m an int
     Returns the monthly payment for a mortgage of size
