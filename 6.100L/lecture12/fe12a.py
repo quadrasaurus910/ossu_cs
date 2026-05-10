@@ -9,10 +9,8 @@ def count_sqrts(nums_list):
     # Your code here
     counter = 0
     for i in nums_list:
-        si = i**2
-        for j in nums_list:
-            if  si == j:
-                counter += 1
+        if i**2 in nums_list:
+            counter += 1
     return counter
 
 # Examples:    
