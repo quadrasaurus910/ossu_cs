@@ -11,18 +11,20 @@ def sum_str_lengths(L):
     # Your code here  
     s = 0
     for i in L:
-        try:
+        if type(i) in [str, list]:
             if type(i) == list:
                 for j in i:
+                    if type(j) != str:
+                        raise ValueError
                     s += len(j)
             else:
                 s += len(i)
-            
-        except:
+        else:
             raise ValueError
+            
     return s
 
 # Examples:
 print(sum_str_lengths(["abcd", ["e", "fg"]]))  # prints 7
-# print(sum_str_lengths([12, ["e", "fg"]]))      # raises ValueError
-# print(sum_str_lengths(["abcd", [3, "fg"]]))    # raises ValueError
+#print(sum_str_lengths([12, ["e", "fg"]]))      # raises ValueError
+print(sum_str_lengths(["abcd", [3, "fg"]]))    # raises ValueError
