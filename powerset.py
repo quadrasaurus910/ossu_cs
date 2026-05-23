@@ -35,4 +35,3 @@ def genPowerset(L):
 
 for i in genPowerset('abcdefghij'):
     print(i)
-    sleep(1)
