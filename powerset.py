@@ -1,3 +1,7 @@
+# showcases exponential complexity runtime
+
+from time import sleep
+
 def getBinaryRep(n, numDigits):
     """Assumes n and numDigits are non-negative ints
     Returns a str of length numDigits that is a binary
@@ -11,6 +15,8 @@ def getBinaryRep(n, numDigits):
     for i in range(numDigits - len(result)): 
         result = '0' + result
     return result
+
+
 def genPowerset(L): 
     """Assumes L is a list
     Returns a list of lists that contains all possible 
@@ -26,3 +32,7 @@ def genPowerset(L):
                 subset.append(L[j])
         powerset.append(subset) 
     return powerset
+
+for i in genPowerset('abcdefghij'):
+    print(i)
+    sleep(1)
