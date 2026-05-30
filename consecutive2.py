@@ -2,7 +2,8 @@ import sys
 
 
 def main():
-    if len(sys.argv) > 1:
+    arglen = len(sys.argv)
+    if arglen > 1:
         ints = []
         for i in sys.argv[1:]:
             try:
@@ -11,8 +12,11 @@ def main():
             except:
                 sys.exit("Arguments must be integers")
             ints.append(int(i))
-        if sys.argv != 4:
+        if arglen == 4:
             print(consecutiveInts(ints[0], ints[1], ints[2]))
+        if arglen == 3:
+            print(consecutiveInts(ints[0], ints[1]))
+
 
 
 def consecutiveInts(s, n, offset=1):
