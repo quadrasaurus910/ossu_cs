@@ -28,7 +28,7 @@ def consecutiveInts(s, n, offset=1):
     print(f"s: {s}, n: {n}, offset: {offset}")
     print((s - offset*n)/n)
     initial = (s  - (offset * n)) / n
-    return [i for i in range(n)]
+    return [i + initial for i in range(n)]
 
 if __name__ == "__main__":
     main()
