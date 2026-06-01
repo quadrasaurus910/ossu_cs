@@ -14,9 +14,9 @@ def main():
                 sys.exit("Arguments must be integers")
             ints.append(int(i))
         if arglen == 4:
-            print(consecutiveInts(ints[0], ints[1], ints[2]))
+            print(consecutiveInts(ints[1], ints[2], ints[3]))
         elif arglen == 3:
-            print(consecutiveInts(ints[0], ints[1]))
+            print(consecutiveInts(ints[1], ints[2]))
         elif arglen == 2:
             na = input("Please enter amount of consecutive integers: ")
             print(consecutiveInts(ints[0], int(na)))
