@@ -6,6 +6,8 @@ def all_positive(d):
     positive value.
     """
     # Your code here  
+    return sorted([k for k,v in d.items() if sum(v) > 0])
+                       
 
 # Examples:
 d = {5:[2,-4], 2:[1,2,3], 1:[2]}

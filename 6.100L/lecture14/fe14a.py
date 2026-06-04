@@ -7,6 +7,7 @@ def keys_with_value(aDict, target):
     If aDict does not contain the value target, returns an empty list.
     """
     # Your code here  
+    return sorted([k for k,v in aDict.items() if target == v])
 
 # Examples:
 aDict = {1:2, 2:4, 5:2}
