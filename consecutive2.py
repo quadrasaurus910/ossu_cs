@@ -19,7 +19,12 @@ def main():
             print(consecutiveInts(ints[1], ints[2]))
         elif arglen == 2:
             na = input("Please enter amount of consecutive integers: ")
-            print(consecutiveInts(ints[0], int(na)))
+            print(consecutiveInts(ints[1], int(na)))
+        elif arglen == 1:
+            s = input("Please enter a sum: ")
+            na = input("Please enter amount of consecutive integers: ")
+            print(consecutiveInts(s, na))
+
 
 
 
