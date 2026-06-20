@@ -9,6 +9,7 @@ def search(L, e):
         if high == low:
             return L[low] == e 
         mid = (low + high)//2 
+        print(f"low: {low}, mid: {mid}, high: {high}")
         if L[mid] == e:
             return True 
         elif L[mid] > e:
@@ -17,7 +18,7 @@ def search(L, e):
             else:
                 return bSearch(L, e, low, mid - 1)
         else:
-            return bSearch(L, e, mid + 1, high)
+            return bSearch(L, e, mid + 1, high) # mid adds one and becomes the new low.
     if len(L) == 0: 
         return False
     else:
@@ -25,7 +26,7 @@ def search(L, e):
     
 # Create list and populate it with integers 1-50.
 li = []
-for i in range(1,50):
+for i in range(1,51):
     li.append(int(i))
 
-print(search(li, 51))
+print(search(li, 50))
