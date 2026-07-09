@@ -1,5 +1,7 @@
 # Figure 10.7 impliments dictionaries using hashing.
 
+import random
+
 class intDict(object):
     """A dictionary with integer keys"""
     
@@ -34,3 +36,15 @@ class intDict(object):
             for e in b:
                 result = result + str(e[0]) + ':' + str(e[1]) + ',' 
         return result[:-1] + '}' #result[:-1] omits the last comma
+    
+
+D = intDict(17)
+for i in range(20):
+    #choose a random int in the range 0 to 10**5 - 1 
+    key = random.choice(range(10**5)) 
+    D.addEntry(key, i)
+print('The value of the intDict is:')
+print(D)
+print('\n', 'The buckets are:')
+for hashBucket in D.buckets: #violates abstraction barrier
+    print(' ', hashBucket)
