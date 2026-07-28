@@ -25,8 +25,11 @@ class Circle():
         """ c is a Circle object
         Returns self or c, the Circle object with the bigger radius """
         if self.rad > c.rad:
-            return]self
+            return self
         elif self.rad < c.rad:
             return c
         else:
             return f'{self} radius is equal to {c} radius'
+
+c1 = Circle(5)
+print(c1.get_radius())
