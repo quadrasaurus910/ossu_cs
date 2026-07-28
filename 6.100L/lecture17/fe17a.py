@@ -28,8 +28,11 @@ class Circle():
             return self
         elif self.rad < c.rad:
             return c
-        else:
-            return f'{self} radius is equal to {c} radius'
+        # else:
+          #  return f'{self} radius is equal to {c} radius'
 
 c1 = Circle(5)
-print(c1.get_radius())
+c2 = Circle(10)
+c2.set_radius(7)
+print(Circle.get_radius(c2.bigger(c1)))
+print(f"Circle c1 has an area of {c1.get_area()}")
