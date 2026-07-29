@@ -50,10 +50,13 @@ class Mortgage(object):
     def plotNet(self, style):
         totPd = [self.paid[0]]
         for i in range(1, len(self.paid)):
-totPd.append(totPd[-1] + self.paid[i]) equityAcquired = pylab.array([self.loan] * \
-len(self.outstanding)) equityAcquired = equityAcquired - \
-pylab.array(self.outstanding) net = pylab.array(totPd) - equityAcquired
-pylab.plot(net, style, label = self.legend)
+            totPd.append(totPd[-1] + self.paid[i]) 
+            equityAcquired = pylab.array([self.loan] * \
+                                         len(self.outstanding)) 
+            equityAcquired = equityAcquired - \
+                pylab.array(self.outstanding) 
+            net = pylab.array(totPd) - equityAcquired
+            pylab.plot(net, style, label = self.legend)
     
 class Fixed(Mortgage):
 
