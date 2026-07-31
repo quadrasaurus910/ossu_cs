@@ -1,6 +1,8 @@
 # Showcases various class implimentation including initialization, inheritance, 
 # overriding superclass initialization, and instance methods and variables.
 
+from matplotlib import pyplot
+
 def findPayment(loan, r, m):
     """Assumes: loan and r are floats, m an int
     Returns the monthly payment for a mortgage of size
@@ -36,27 +38,27 @@ class Mortgage(object):
         return self.legend
 
     def plotPayments(self, style):
-        pylab.plot(self.paid[1:], style, label = self.legend)
+        pyplot.plot(self.paid[1:], style, label = self.legend)
 
     def plotBalance(self, style):
-        pylab.plot(self.outstanding, style, label = self.legend)
+        pyplot.plot(self.outstanding, style, label = self.legend)
 
     def plotTotPd(self, style):
         totPd = [self.paid[0]]
         for i in range(1, len(self.paid)):
             totPd.append(totPd[-1] + self.paid[i]) 
-        pylab.plot(totPd, style, label = self.legend)
+        pyplot.plot(totPd, style, label = self.legend)
 
     def plotNet(self, style):
         totPd = [self.paid[0]]
         for i in range(1, len(self.paid)):
             totPd.append(totPd[-1] + self.paid[i]) 
-            equityAcquired = pylab.array([self.loan] * \
+            equityAcquired = pyplot.array([self.loan] * \
                                          len(self.outstanding)) 
             equityAcquired = equityAcquired - \
-                pylab.array(self.outstanding) 
-            net = pylab.array(totPd) - equityAcquired
-            pylab.plot(net, style, label = self.legend)
+                pyplot.array(self.outstanding) 
+            net = pyplot.array(totPd) - equityAcquired
+            pyplot.plot(net, style, label = self.legend)
     
 class Fixed(Mortgage):
 
