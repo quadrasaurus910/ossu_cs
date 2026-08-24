@@ -197,7 +197,10 @@ def is_heap0(tree, compare_func):
       
 def is_heap(tree, compare_func):
     # print(tree.get_value())
-    print(f'tree height {find_tree_height(tree)}, value {tree.get_value()}')
+    print(f'tree height {find_tree_height(tree)}, '
+          f'value {tree.get_value()}', 
+          # f'right child: {tree.get_right_child().get_value()}'
+          )
     if find_tree_height(tree) == 0:
         return True #tree.get_value()
     elif find_tree_height(tree) == 1:
