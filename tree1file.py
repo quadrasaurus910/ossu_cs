@@ -224,7 +224,7 @@ def is_heap(tree, compare_func):
               )
         if lcompare == False or rcompare == False:
             return False
-        if lcompare == True and rcompare == True:
+        if lcompare == True or rcompare == True:
             return True
         return  compare_func(max(lValue, rValue), tree.get_value())
     elif find_tree_height(tree) > 1:
@@ -234,13 +234,16 @@ def is_heap(tree, compare_func):
             lValue = is_heap(tree.get_left_child(), compare_func)
         if tree.get_right_child() != None:
             rValue = is_heap(tree.get_right_child(), compare_func)
-        print(f"height {find_tree_height(tree)}: value {tree.get_value()}, lvalue: {lValue}, rValue: {rValue}, max: {max(lValue, rValue)}")
+        print(f"height {find_tree_height(tree)}: value, " 
+              f"{tree.get_value()}, lvalue: {lValue}, "
+              f"rValue: {rValue}" #, max: {max(lValue, rValue)}"
+              )
         # print(f'max: {max(lValue, rValue)}')
         if lValue == False or rValue == False:
             return False
-        if lValue == True and rValue == True:
+        elif lValue == True or rValue == True:
             return True
-        return  compare_func(max(lValue, rValue), tree.get_value())
+        # return  True # compare_func(max(lValue, rValue), tree.get_value())
 
 
 def is_heap3(tree, compare_func):
