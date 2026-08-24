@@ -136,6 +136,9 @@ tree1 = Node(8, Node(2, Node(1), Node(6)), Node(10))
 tree2 = Node(7, Node(2, Node(1), Node(5, Node(3), Node(6))), Node(9, Node(8), Node(10)))
 tree3 = Node(5, Node(3, Node(2), Node(4)), Node(14, Node(12), Node(21, Node(20), Node(26))))
 maxHeap = Node(21, Node(15, Node(7), Node(11)), Node(3, Node(2), Node(1)))
+tr1 = Node(5,Node(15,None,Node(16,Node(30),Node(17))),Node(6,Node(20,None,Node(45)),Node(11)))
+tr2 = Node(2,Node(3,Node(4),Node(5,Node(6))),Node(7,None,Node(8,Node(9),Node(1))))
+        
 # print(maxHeap)
 
 def find_tree_height(tree):
@@ -252,7 +255,7 @@ if __name__ == '__main__':
     # IMPORTANT: Do not erase the pass statement below if you do not add your own code
     # print(find_tree_height(tree1))
     # is_heap(tree2, (lambda x,y: x < y))
-    print(is_heap(tree3, (lambda x,y: x > y)))
+    print(is_heap(tr1, (lambda x,y: x > y)))
     pass
 
 
