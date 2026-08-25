@@ -200,10 +200,10 @@ def is_heap0(tree, compare_func):
       
 def is_heap(tree, compare_func):
     # print(tree.get_value())
-    print(f'tree height {find_tree_height(tree)}, '
-          f'value {tree.get_value()}', 
+    # print(f'tree height {find_tree_height(tree)}, '
+          # f'value {tree.get_value()}', 
           # f'right child: {tree.get_right_child().get_value()}'
-          )
+          # )
     if find_tree_height(tree) == 0:
         return True #tree.get_value()
     elif find_tree_height(tree) == 1:
@@ -217,11 +217,11 @@ def is_heap(tree, compare_func):
         if tree.get_right_child() != None:
             rValue = tree.get_right_child().get_value()
             rcompare = compare_func(tree.get_right_child().get_value(), tree.get_value())
-        print(f"height 1: value {tree.get_value()}, "
-              f"lvalue: {lValue}, rValue: {rValue}, "
-              f"max: {max(lValue, rValue)}, "
-              f"lcompare: {lcompare}, rcompare: {rcompare}"
-              )
+        # print(f"height 1: value {tree.get_value()}, "
+              # f"lvalue: {lValue}, rValue: {rValue}, "
+              # f"max: {max(lValue, rValue)}, "
+              # f"lcompare: {lcompare}, rcompare: {rcompare}"
+              # )
         if lcompare == False or rcompare == False:
             return False
         if lcompare == True or rcompare == True:
@@ -234,10 +234,10 @@ def is_heap(tree, compare_func):
             lValue = is_heap(tree.get_left_child(), compare_func)
         if tree.get_right_child() != None:
             rValue = is_heap(tree.get_right_child(), compare_func)
-        print(f"height {find_tree_height(tree)}: value, " 
-              f"{tree.get_value()}, lvalue: {lValue}, "
-              f"rValue: {rValue}" #, max: {max(lValue, rValue)}"
-              )
+        # print(f"height {find_tree_height(tree)}: value, " 
+              # f"{tree.get_value()}, lvalue: {lValue}, "
+              # f"rValue: {rValue}" #, max: {max(lValue, rValue)}"
+               #)
         # print(f'max: {max(lValue, rValue)}')
         if lValue == False or rValue == False:
             return False
