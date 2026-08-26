@@ -248,17 +248,26 @@ def is_heap(tree, compare_func):
 
 def is_heap3(tree, compare_func):
     if find_tree_height(tree) == 0:
-        return tree.get_value()
-    else:
-        ...
-
+        return True #tree.get_value()
+    elif find_tree_height(tree) >= 1:
+        lValue = None
+        rValue = None
+        if tree.get_left_child() != None:
+            lValue = is_heap(tree.get_left_child(), compare_func)
+        if tree.get_right_child() != None:
+            rValue = is_heap(tree.get_right_child(), compare_func)
+        if lValue == False or rValue == False:
+            return False
+        elif lValue == True or rValue == True:
+            return True
+        
 
 if __name__ == '__main__':
     # You can use this part for your own testing and debugging purposes.
     # IMPORTANT: Do not erase the pass statement below if you do not add your own code
     # print(find_tree_height(tree1))
     # is_heap(tree2, (lambda x,y: x < y))
-    print(is_heap(tr1, (lambda x,y: x > y)))
+    print(is_heap(tree1, (lambda x,y: x > y)))
     pass
 
 
