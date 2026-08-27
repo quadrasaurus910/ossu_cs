@@ -11,12 +11,16 @@ class Circle():
         """ c is a Circle object 
         Returns a new Circle object whose radius is 
         the sum of self and c's radius """
-        # your code here
+        return Circle(self.get_radius() + c.get_radius())
 
     def __str__(self):
         """ A Circle's string representation is the radius """
-        # your code here
+        return str(f"Circle has radius {self.get_radius()}, "
+                   f"diameter {self.get_radius() * 2}, "
+                   f"circumference {round((self.get_radius()*2) * 3.14, 3)}")
 
 
 c1 = Circle(5)
-print(c1.get_radius())
+c2 = Circle(10)
+print((c1 + c2).get_radius())
+print(c1)
