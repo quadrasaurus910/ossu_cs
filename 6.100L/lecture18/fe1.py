@@ -19,7 +19,8 @@ class Circle():
         """ A Circle's string representation is the radius """
         return str(f"Circle has radius {self.get_radius()}, "
                    f"diameter {self.get_radius() * 2}, "
-                   f"circumference {round((self.get_radius()*2) * 3.14, 3)}")
+                   f"circumference {round((self.get_radius()*2) * 3.14, 3)}, "
+                   f"area {round((self.get_radius()**2)*3.14, 3)}")
 
 
 c1 = Circle(5)
