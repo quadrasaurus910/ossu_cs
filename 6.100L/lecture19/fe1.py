@@ -34,7 +34,7 @@ class Stack(Container):
         """
         # Your code here
         if len(self.myList) > 0:
-            self.myList.pop()
+            return self.myList.pop()
 
 c1 = Container()
 c1
@@ -46,5 +46,5 @@ s1.remove()
 for i in range(5):
     s1.add(i)
 print(s1.size())
-s1.remove()
+print(s1.remove())
 print(s1.size())
