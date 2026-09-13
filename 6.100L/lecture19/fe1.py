@@ -33,13 +33,16 @@ class Stack(Container):
         Returns the element removed or None if the queue contains no elements
         """
         # Your code here
-        return self.myList.pop()
+        if len(self.myList) > 0:
+            self.myList.pop()
 
 c1 = Container()
+c1
 for i in range(5):
     c1.add(i)
 print(c1.size())
 s1 = Stack()
+s1.remove()
 for i in range(5):
     s1.add(i)
 print(s1.size())
