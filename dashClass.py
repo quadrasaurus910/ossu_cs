@@ -9,7 +9,7 @@ class dashAst(object):
 
     def __str__(self):
         now = datetime.now()
-        return now.strftime("%Y-%m-%d %H:%M:%S")
+        return f"The current time is {now.strftime("%Y-%m-%d %H:%M:%S")}"
 
 d1 = dashAst("beacon assistant")
 print(d1)
