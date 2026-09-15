@@ -118,3 +118,17 @@ for i in propList:
         if i.get("wmoUnit", "none") == "percent":
             i["wmoUnit"] = "%"
         print(f"{i['name']}: {i['value']} {i.get('wmoUnit', '')}")
+
+def nws_dash():
+    keys = ["stationName",
+        "timestamp",
+        "textDescription",
+        "temperature",
+        "windChill",
+        "heatIndex",
+        "windDirection",
+        "windSpeed",
+        "relativeHumidity",
+        ]
+    return keys
+
