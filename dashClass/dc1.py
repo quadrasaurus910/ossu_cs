@@ -13,9 +13,8 @@ class dashAst(object):
         return f"The current time is {now.strftime("%Y-%m-%d %H:%M:%S")}"
 
     def nws(self):
-        print(nws_dash)
+        print(nws_dash())
 
 d1 = dashAst("beacon assistant")
 print(d1)
 d1.nws()
-print(nws_dash())
