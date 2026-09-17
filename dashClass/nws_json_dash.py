@@ -3,6 +3,7 @@ import requests
 import sys
 import dateutil.parser
 import dateutil.tz
+from datetime import datetime
 
 
 def degToCompass(num):
