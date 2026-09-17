@@ -71,5 +71,9 @@ def nws_dash():
             if i.get("wmoUnit", "none") == "percent":
                 i["wmoUnit"] = "%"
     return propList
+
+
+def check_existing_nws():
+    ...
             
 
