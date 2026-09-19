@@ -7,10 +7,12 @@ ts = None
 if tf.is_file():
     with open("data/timestamp.csv", "r") as f:
         ts = f.read()
-        print(ts)
+        d1 = datetime.now() - datetime.fromisoformat(ts)
         if ts != None:
             try:
-                print(datetime.now().isoformat() - datetime.fromisoformat(ts))
+                tsi = datetime.fromisoformat(ts)
+
+                print(datetime.now() - tsi)
             except:
                 print("error")
 else:
