@@ -10,7 +10,7 @@ if tf.is_file():
         print(ts)
         if ts != None:
             try:
-                print(datetime.now() - ts)
+                print(datetime.now().isoformat() - datetime.fromisoformat(ts))
             except:
                 print("error")
 else:
