@@ -1,5 +1,7 @@
 from pathlib import Path
 from datetime import datetime
+from nws_json_dash import nws_dash
+import json
 
 tf = Path("data/timestamp.csv")
 ts = None
@@ -25,3 +27,34 @@ else:
         #f.write(now.strftime("%Y-%m-%d %H:%M:%S"))
 
 # print(datetime.now().isoformat())
+
+
+def timeCheck():
+    timeFile = Path("data/timestamp.csv")
+    timestamp = None
+    if timeFile.is_file():
+        with open("data/timestamp.csv", "r") as f:
+            timestamp = f.read()
+            if timestamp != None:
+                try:
+                    timedelta = int((datetime.now() - datetime.fromisoformat(ts)).total_seconds() // 60)
+                    if timedelta < 5:
+                        return False
+                    else:
+                        return True
+                except:
+                    return False
+
+
+
+def get_nws_json():
+    if timeCheck() == False:
+        with open('data/nws.json', 'r', encoding='utf-8') as file:
+            return json.load(file)
+    else:
+        with open("data/nws.json", "w") as file:
+            json.dump(nws_dash(), file, indent=4)
+        with open('data/timestamp.csv', "w") as f:
+                f.write(datetime.now().isoformat())
+
+print(get_nws_json())

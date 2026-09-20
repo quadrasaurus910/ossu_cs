@@ -1,0 +1,123 @@
+[
+    {
+        "name": "@id",
+        "value": "https://api.weather.gov/stations/KSUT/observations/2026-09-20T19:35:00+00:00"
+    },
+    {
+        "name": "@type",
+        "value": "wx:ObservationStation"
+    },
+    {
+        "name": "elevation",
+        "value": 8,
+        "wmoUnit": "m"
+    },
+    {
+        "name": "station",
+        "value": "https://api.weather.gov/stations/KSUT"
+    },
+    {
+        "name": "stationId",
+        "value": "KSUT"
+    },
+    {
+        "name": "stationName",
+        "value": "Brunswick County Airport"
+    },
+    {
+        "name": "timestamp",
+        "value": "September 20th, 3:35 PM"
+    },
+    {
+        "name": "rawMessage",
+        "value": "KSUT 201935Z AUTO 06004KT 10SM SCT014 SCT022 OVC060 27/24 A2995 RMK AO2"
+    },
+    {
+        "name": "textDescription",
+        "value": "Cloudy"
+    },
+    {
+        "name": "icon",
+        "value": "https://api.weather.gov/icons/land/day/ovc?size=medium"
+    },
+    {
+        "name": "temperature",
+        "value": 80.6,
+        "wmoUnit": "\u00b0F"
+    },
+    {
+        "name": "dewpoint",
+        "value": 24,
+        "wmoUnit": "degC"
+    },
+    {
+        "name": "windDirection",
+        "value": 60,
+        "wmoUnit": "degree_(angle)"
+    },
+    {
+        "name": "windSpeed",
+        "value": "4.7 MPH N",
+        "wmoUnit": ""
+    },
+    {
+        "name": "windGust",
+        "value": null,
+        "wmoUnit": "km_h-1"
+    },
+    {
+        "name": "barometricPressure",
+        "value": 101420,
+        "wmoUnit": "Pa"
+    },
+    {
+        "name": "seaLevelPressure",
+        "value": null,
+        "wmoUnit": "Pa"
+    },
+    {
+        "name": "visibility",
+        "value": 16090,
+        "wmoUnit": "m"
+    },
+    {
+        "name": "maxTemperatureLast24Hours",
+        "value": null,
+        "wmoUnit": "degC"
+    },
+    {
+        "name": "minTemperatureLast24Hours",
+        "value": null,
+        "wmoUnit": "degC"
+    },
+    {
+        "name": "precipitationLastHour",
+        "value": null,
+        "wmoUnit": "mm"
+    },
+    {
+        "name": "precipitationLast3Hours",
+        "value": null,
+        "wmoUnit": "mm"
+    },
+    {
+        "name": "precipitationLast6Hours",
+        "value": null,
+        "wmoUnit": "mm"
+    },
+    {
+        "name": "relativeHumidity",
+        "value": 83.68,
+        "wmoUnit": "%"
+    },
+    {
+        "name": "windChill",
+        "value": null,
+        "wmoUnit": "degC"
+    },
+    {
+        "name": "heatIndex",
+        "value": 86.17,
+        "wmoUnit": "\u00b0F"
+    }
+]
