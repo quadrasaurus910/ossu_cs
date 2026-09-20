@@ -46,7 +46,6 @@ def timeCheck():
                     return False
 
 
-
 def get_nws_json():
     if timeCheck() == False:
         with open('data/nws.json', 'r', encoding='utf-8') as file:
@@ -56,5 +55,11 @@ def get_nws_json():
             json.dump(nws_dash(), file, indent=4)
         with open('data/timestamp.csv', "w") as f:
                 f.write(datetime.now().isoformat())
+
+
+def format_nws_dash():
+    """Returns str of NWS json data formatted for dashClass"""
+    with open('data/nws.json', 'r', encoding='utf-8') as file:
+        nws_json = json.load(file)
 
 print(get_nws_json())
