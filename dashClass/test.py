@@ -12,7 +12,7 @@ if tf.is_file():
             try:
                 tsi = datetime.fromisoformat(ts)
 
-                print(datetime.now() - tsi)
+                print(int((datetime.now() - tsi).total_seconds() // 60))
             except:
                 print("error")
 else:
