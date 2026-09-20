@@ -11,8 +11,11 @@ if tf.is_file():
         if ts != None:
             try:
                 tsi = datetime.fromisoformat(ts)
-
-                print(int((datetime.now() - tsi).total_seconds() // 60))
+                td1 = int((datetime.now() - datetime.fromisoformat(ts)).total_seconds() // 60)
+                if td1 < 5:
+                    ...
+                else:
+                    ...
             except:
                 print("error")
 else:
