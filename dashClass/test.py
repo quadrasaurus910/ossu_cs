@@ -61,5 +61,7 @@ def format_nws_dash():
     """Returns str of NWS json data formatted for dashClass"""
     with open('data/nws.json', 'r', encoding='utf-8') as file:
         nws_json = json.load(file)
+        for i in nws_json:
+            print(i)
 
-print(get_nws_json())
+print(format_nws_dash())
