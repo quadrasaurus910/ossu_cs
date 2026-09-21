@@ -70,6 +70,7 @@ def nws_dash():
                 i["value"] = round(i["value"], 2)
             if i.get("wmoUnit", "none") == "percent":
                 i["wmoUnit"] = "%"
+            print(i)
     return propList
 
 
