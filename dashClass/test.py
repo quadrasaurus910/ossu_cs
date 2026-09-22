@@ -48,9 +48,11 @@ def timeCheck():
 
 def get_nws_json():
     if timeCheck() == False:
+        print('timeCheck is false')
         with open('data/nws.json', 'r', encoding='utf-8') as file:
             return json.load(file)
     else:
+        print('timeCheck is true')
         with open("data/nws.json", "w") as file:
             json.dump(nws_dash(), file, indent=4)
         with open('data/timestamp.csv', "w") as f:

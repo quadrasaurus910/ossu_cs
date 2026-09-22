@@ -37,6 +37,7 @@ def nws_dash():
     properties = j["properties"]
     propDict = {}
     propList = []
+    propList2 = []
     for i in properties:
         listDict = {}
         if i == "timestamp":
@@ -70,8 +71,8 @@ def nws_dash():
                 i["value"] = round(i["value"], 2)
             if i.get("wmoUnit", "none") == "percent":
                 i["wmoUnit"] = "%"
-            print(i)
-    return propList
+            propList2.append(i)
+    return propList2
 
 
 def check_existing_nws():
