@@ -63,12 +63,14 @@ def get_nws_json():
 
 def format_nws_dash():
     """Returns str of NWS json data formatted for dashClass"""
+    nws_dict = {}
+    nws_json = None
     with open('data/nws.json', 'r', encoding='utf-8') as file:
         nws_json = json.load(file)
         for i in nws_json:
             # print(i)
-            ...
-        nwsFstring = f"{nws_json[0]["value"]}"
-        return nwsFstring
+            nws_dict[i["name"]] = i["value"]
+    nwsFstring = f"{nws_dict['textDescription']} {nws_dict['temperature']}°F {nws_dict["windSpeed"]}"
+    return nwsFstring
 
 print(format_nws_dash())
