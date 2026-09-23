@@ -66,6 +66,9 @@ def format_nws_dash():
     with open('data/nws.json', 'r', encoding='utf-8') as file:
         nws_json = json.load(file)
         for i in nws_json:
-            print(i)
+            # print(i)
+            ...
+        nwsFstring = f"{nws_json[0]["value"]}"
+        return nwsFstring
 
 print(format_nws_dash())
