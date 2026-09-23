@@ -53,10 +53,12 @@ def get_nws_json():
             return json.load(file)
     else:
         print('timeCheck is true')
+        nwsDash = nws_dash()
         with open("data/nws.json", "w") as file:
-            json.dump(nws_dash(), file, indent=4)
+            json.dump(nwsDash, file, indent=4)
         with open('data/timestamp.csv', "w") as f:
-                f.write(datetime.now().isoformat())
+            f.write(datetime.now().isoformat())
+        
 
 
 def format_nws_dash():
