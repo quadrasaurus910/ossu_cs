@@ -5,35 +5,30 @@
     },
     {
         "name": "timestamp",
-        "value": "September 21st, 7:35 PM"
+        "value": "September 24th, 6:55 PM"
     },
     {
         "name": "textDescription",
-        "value": "Clear"
+        "value": "Cloudy"
     },
     {
         "name": "temperature",
-        "value": 78.8,
+        "value": 66.2,
         "wmoUnit": "\u00b0F"
     },
     {
         "name": "windDirection",
-        "value": 60,
+        "value": 360,
         "wmoUnit": "degree_(angle)"
     },
     {
         "name": "windSpeed",
-        "value": "4.7 MPH N",
+        "value": "11.41 MPH NNE",
         "wmoUnit": ""
     },
     {
         "name": "relativeHumidity",
-        "value": 88.76,
+        "value": 82.75,
         "wmoUnit": "%"
-    },
-    {
-        "name": "heatIndex",
-        "value": 82.38,
-        "wmoUnit": "\u00b0F"
     }
 ]

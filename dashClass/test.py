@@ -58,11 +58,20 @@ def get_nws_json():
             json.dump(nwsDash, file, indent=4)
         with open('data/timestamp.csv', "w") as f:
             f.write(datetime.now().isoformat())
-        
 
+
+def update_nws():
+    if timeCheck() == True:
+        nwsDash = nws_dash()
+        with open("data/nws.json", "w") as file:
+            json.dump(nwsDash, file, indent=4)
+        with open('data/timestamp.csv', "w") as f:
+            f.write(datetime.now().isoformat())
+        
 
 def format_nws_dash():
     """Returns str of NWS json data formatted for dashClass"""
+    update_nws()
     nws_dict = {}
     nws_json = None
     with open('data/nws.json', 'r', encoding='utf-8') as file:
@@ -70,7 +79,7 @@ def format_nws_dash():
         for i in nws_json:
             # print(i)
             nws_dict[i["name"]] = i["value"]
-    nwsFstring = f"{nws_dict['textDescription']} {nws_dict['temperature']}°F {nws_dict["windSpeed"]}\n{nws_dict["stationName"]}\n"
+    nwsFstring = f"{nws_dict['textDescription']} {nws_dict['temperature']}°F {nws_dict["windSpeed"]}\n{nws_dict["stationName"]}\n{nws_dict["timestamp"]}"
     return nwsFstring
 
 print(format_nws_dash())
