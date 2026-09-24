@@ -82,4 +82,4 @@ def format_nws_dash():
     nwsFstring = f"{nws_dict['textDescription']} {nws_dict['temperature']}°F {nws_dict["windSpeed"]}\n{nws_dict["stationName"]}\n{nws_dict["timestamp"]}"
     return nwsFstring
 
-print(format_nws_dash())
+# print(format_nws_dash())
