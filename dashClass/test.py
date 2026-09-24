@@ -70,7 +70,7 @@ def format_nws_dash():
         for i in nws_json:
             # print(i)
             nws_dict[i["name"]] = i["value"]
-    nwsFstring = f"{nws_dict['textDescription']} {nws_dict['temperature']}°F {nws_dict["windSpeed"]}"
+    nwsFstring = f"{nws_dict['textDescription']} {nws_dict['temperature']}°F {nws_dict["windSpeed"]}\n{nws_dict["stationName"]}\n"
     return nwsFstring
 
 print(format_nws_dash())
