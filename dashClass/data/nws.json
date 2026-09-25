@@ -5,15 +5,15 @@
     },
     {
         "name": "timestamp",
-        "value": "September 24th, 6:55 PM"
+        "value": "September 25th, 3:55 PM"
     },
     {
         "name": "textDescription",
-        "value": "Cloudy"
+        "value": "Clear"
     },
     {
         "name": "temperature",
-        "value": 66.2,
+        "value": 73.4,
         "wmoUnit": "\u00b0F"
     },
     {
@@ -28,7 +28,12 @@
     },
     {
         "name": "relativeHumidity",
-        "value": 82.75,
+        "value": 56.91,
         "wmoUnit": "%"
+    },
+    {
+        "name": "heatIndex",
+        "value": 73.11,
+        "wmoUnit": "\u00b0F"
     }
 ]
