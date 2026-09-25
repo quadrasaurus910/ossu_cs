@@ -17,7 +17,7 @@ def format_utc_to_eastern(utc_timestamp_str):
     eastern_dt = dateutil.parser.parse(utc_timestamp_str).astimezone(target_tz)
     day = eastern_dt.day
     suffix = {1: 'st', 2: 'nd', 3: 'rd'}.get(day % 10, 'th') if not 10 <= day % 100 <= 20 else 'th'
-    return eastern_dt.strftime(f"%B {day}{suffix}, %I:%M %p").replace(" 0", " ")
+    return eastern_dt.strftime(f"%I:%M %p %B {day}{suffix}").replace(" 0", " ")
 
 
 def nws_dash():
