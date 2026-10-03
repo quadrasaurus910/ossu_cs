@@ -1,12 +1,27 @@
+# ASCII printable characters range from 32 to 126
+
 m = 'test'
 p = [50,50,50,50]
 
 cm = ''
 
+lam = lambda chr,pad: ((ord(chr) + pad) > 126)
+
 for i in range(len(m)):
-    c = ord(m[i])
-    cMod = c % 95
+    c = None
+    if lam(m[i], p[i]):
+        c = (((ord(m[i]) + p[i]) - 32) % 95) + 32
+    else:
+        c = ord(m[i]) + p[i]
+    cm += chr(c)
+print(f"encrypted message: {cm}")
 
 a = ord('a')
 aMod = (a + 95) % 95
-print(f"a: {a}, aMod: {aMod}")
+aRem = a + 95 - 32
+aRemMod = aRem % 95
+print(f"a: {a}, aMod: {aMod}, aRem: {aRem}, aRemMod: {aRemMod}")
+if (lam(m[0],p[0])):
+    rem = ord(m[0]) + p[0] - 32
+    remMod = rem % 95
+    print(chr(remMod + 32))
