@@ -4,6 +4,7 @@ m = 'test'
 p = [50,50,50,50]
 
 cm = ''
+dc = ''
 
 lam = lambda chr,pad: ((ord(chr) + pad) > 126)
 
@@ -15,6 +16,13 @@ for i in range(len(m)):
         c = ord(m[i]) + p[i]
     cm += chr(c)
 print(f"encrypted message: {cm}")
+
+for i in range(len(cm)):
+    c = (ord(cm[i]) - p[i])
+    if c < 32:
+        c = c + 95
+    dc += chr(c)
+print(dc)
 
 a = ord('a')
 aMod = (a + 95) % 95
