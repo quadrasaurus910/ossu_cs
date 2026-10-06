@@ -13,6 +13,8 @@ for i in range(len(m)):
     c = ord(m[i]) + p[i]
     if c > 126:
         c = (((ord(m[i]) + p[i]) - 32) % 95) + 32
+    if c < 32:
+        c = (((ord(m[i]) + p[i]) - 32) % 95) + 32
     else:
         c = ord(m[i]) + p[i]
     cm += chr(c)
