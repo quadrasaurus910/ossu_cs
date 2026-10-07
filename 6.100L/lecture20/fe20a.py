@@ -34,9 +34,11 @@ class Queue(Container):
         """
         # Your code here
         if self.size() > 0:
-            e = self.myList[0]
-            self.myList.remove(e)
-            return e
+            # e = self.myList[0]
+            # self.myList.remove(e)
+            # return e
+            # other solution: 
+            return self.myList.pop(0)
 
 c1 = Container()
 c1.add('a')
