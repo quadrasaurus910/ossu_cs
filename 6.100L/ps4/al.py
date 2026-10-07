@@ -1,7 +1,7 @@
 # ASCII printable characters range from 32 to 126
 
-m = 'test'
-p = [50,50,50,50]
+m = 'test '
+p = [50,50,50,50,-50]
 
 cm = ''
 dc = ''
@@ -14,9 +14,8 @@ for i in range(len(m)):
     if c > 126:
         c = (((ord(m[i]) + p[i]) - 32) % 95) + 32
     if c < 32:
+        
         c = (((ord(m[i]) + p[i]) - 32) % 95) + 32
-    else:
-        c = ord(m[i]) + p[i]
     cm += chr(c)
 print(f"encrypted message: {cm}")
 
