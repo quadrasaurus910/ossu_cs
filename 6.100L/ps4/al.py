@@ -1,7 +1,7 @@
 # ASCII printable characters range from 32 to 126
 
 m = 'test '
-p = [50,50,50,50,-50]
+p = [50,50,50,50,-1]
 
 cm = ''
 dc = ''
