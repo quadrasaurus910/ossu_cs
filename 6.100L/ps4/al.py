@@ -11,11 +11,7 @@ lam = lambda chr,pad: ((ord(chr) + pad) > 126)
 
 for i in range(len(m)):
     c = ord(m[i]) + p[i]
-    if c > 126:
-        c = (((ord(m[i]) + p[i]) - 32) % 95) + 32
-    if c < 32:
-        if c < 0:
-            belowZ = abs(c)
+    if 32 > c or c  > 126:
         c = (((ord(m[i]) + p[i]) - 32) % 95) + 32
     cm += chr(c)
 print(f"encrypted message: {cm}")
@@ -32,6 +28,7 @@ c = ord(' ')
 cp = -50
 cpa = abs(cp)
 cpaMod = cpa % 95
+# print(cpaMod)
 aMod = (a + 95) % 95
 aRem = a + 95 - 32
 aRemMod = aRem % 95
