@@ -14,7 +14,8 @@ for i in range(len(m)):
     if c > 126:
         c = (((ord(m[i]) + p[i]) - 32) % 95) + 32
     if c < 32:
-        
+        if c < 0:
+            belowZ = abs(c)
         c = (((ord(m[i]) + p[i]) - 32) % 95) + 32
     cm += chr(c)
 print(f"encrypted message: {cm}")
