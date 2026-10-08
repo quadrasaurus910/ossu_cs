@@ -28,6 +28,10 @@ for i in range(len(cm)):
 print(dc)
 
 a = ord('a')
+c = ord(' ')
+cp = -50
+cpa = abs(cp)
+cpaMod = cpa % 95
 aMod = (a + 95) % 95
 aRem = a + 95 - 32
 aRemMod = aRem % 95
