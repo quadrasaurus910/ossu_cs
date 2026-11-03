@@ -23,3 +23,5 @@ def testBest(maxWeight = 20):
     for item in taken:
         print(item)
     print(f"items len: {len(items)}, pset len: {len(pset)}")
+
+    testBest()
