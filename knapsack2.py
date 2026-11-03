@@ -24,4 +24,4 @@ def testBest(maxWeight = 20):
         print(item)
     print(f"items len: {len(items)}, pset len: {len(pset)}")
 
-    testBest()
+testBest()
