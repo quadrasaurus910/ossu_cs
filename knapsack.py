@@ -45,6 +45,15 @@ def buildItems():
         Items.append(Item(names[i], values[i], weights[i])) 
     return Items
 
+def buildItems2():
+    names = ['computer','painting','radio','vase','book','computer'] 
+    values = [300,90,20,50,10,200]
+    weights = [100,9,4,2,1,20]
+    Items = []
+    for i in range(len(values)):
+        Items.append(Item(names[i], values[i], weights[i])) 
+    return Items
+
 def testGreedy(items, maxWeight, keyFunction):
     taken, val = greedy(items, maxWeight, keyFunction) 
     print('Total value of items taken is', val)
